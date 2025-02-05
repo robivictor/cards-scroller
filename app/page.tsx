@@ -1,5 +1,5 @@
 import React from "react";
-import CardItem from "@/components/CardItem";
+import CardTypeOne from "@/components/CardTypeOne";
 import Hero from "@/components/Hero";
 import ImageOne from "@/public/image_one.avif";
 import ImageTwo from "@/public/image_two.avif";
@@ -10,14 +10,14 @@ export default function Home() {
 
   const cards = [
     {
-      icon: HomeIcon,
-      description: "Create your own website to build a relationship with viewers and sell content.",
-      image: ImageOne,
-    },
-    {
       icon: AppWindowIcon,
       description: "Sell on-demand content globally and accept payment in over 100 currencies.",
       image: ImageTwo,
+    },
+    {
+      icon: HomeIcon,
+      description: "Create your own website to build a relationship with viewers and sell content.",
+      image: ImageOne,
     },
     {
       icon: ChartNoAxesCombinedIcon,
@@ -30,8 +30,9 @@ export default function Home() {
     <main className="relative">
       <Hero/>
       {cards.map((card, i) => (
-        <CardItem key={`p_${i}`} i={i} {...card} />
+        <CardTypeOne key={`p_${i}`} i={i} {...card} />
       ))}
+       <Hero/>
     </main>
   );
 }
